@@ -1,12 +1,12 @@
+import { useState } from "react";
+import ProgressBar from "./progressBar/ProgressBar";
 import "./styles.css";
-import Counter1 from "./components/Counter1";
-import Counter2 from "./components/Counter2";
 
 export default function App() {
+  const [value, setValue] = useState(0);
   return (
     <div className="App">
-      {/* <Counter1/> */}
-      <Counter2 />
+      <ProgressBar color="light-orange" width="300px" value={value} max="100" />
     </div>
   );
 }

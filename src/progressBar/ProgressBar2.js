@@ -30,7 +30,7 @@ function ProgressBar2({ value, max }) {
   return (
     <Container>
       <progress value={value} max={max} />
-      <span> {value} % </span>
+      <span style={{ fontSize: "24px", fontWeight: "bold" }}> {value} % </span>
     </Container>
   );
 }

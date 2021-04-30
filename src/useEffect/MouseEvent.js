@@ -13,6 +13,10 @@ function MouseEvent() {
   useEffect(() => {
     console.log("Effect triggered");
     window.addEventListener("mousemove", logMousePosition);
+
+    return () => {
+      window.removeEventListener("mousemove", logMousePosition);
+    };
   }, []);
 
   return (

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function Counter2() {
+function MouseEvent() {
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
 
@@ -22,4 +22,4 @@ function Counter2() {
   );
 }
 
-export default Counter2;
+export default MouseEvent;

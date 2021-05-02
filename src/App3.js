@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import Counter2 from "./useState/Counter2";
-import MouseButton from "./useEffect/MouseButton";
-import DataFetch from "./useEffect/DataFetch";
+import ClassForm from "./ReactForms/ClassForm";
+import FunctionForm from "./ReactForms/FunctionForm";
 
 function App3() {
   return (
     <>
-      <DataFetch />
+      <FunctionForm />
     </>
   );
 }

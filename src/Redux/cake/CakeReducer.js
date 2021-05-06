@@ -4,13 +4,15 @@ const initialState = {
   noOfCakes: 10
 };
 
-const CakeReducer = (state, action) => {
+const CakeReducer = (state = initialState, action) => {
   switch (action.type) {
     case BUY_CAKE:
       return {
         ...state,
-        noOfCakes: noOfCakes - 1
+        noOfCakes: state.noOfCakes - 1
       };
+    default:
+      return state;
   }
 };
 

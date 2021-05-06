@@ -1,15 +1,17 @@
-import React, { useState } from "react";
-import ClassForm from "./ReactForms/ClassForm";
-import FunctionForm from "./ReactForms/FunctionForm";
+import React from "react";
 import CakeContainer from "./Redux/CakeContainer";
 import { Provider } from "react-redux";
 import store from "./Redux/store";
+import HooksCakeContainer from "./Redux/HooksCakeContainer";
+import IceCreamContainer from "./Redux/IceCreamContainer";
 
 function App3() {
   return (
     <Provider store={store}>
       <div className="app">
-        <CakeContainer />
+        {/* <HooksCakeContainer />
+        <CakeContainer /> */}
+        <IceCreamContainer />
       </div>
     </Provider>
   );

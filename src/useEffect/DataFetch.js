@@ -5,21 +5,17 @@ function DataFetch() {
   const [post, myPost] = useState([]);
   const [id, setId] = useState(1);
   const [loading, setLoading] = useState(true);
-  const [idFromButton, setIdFromButton] = useState(1);
-
-  const handleClick = () => {
-    setIdFromButton(id);
-  };
+  const [btn, setBtn] = useState();
 
   useEffect(() => {
     axios
-      .get(`https://jsonplaceholder.typicode.com/posts/${idFromButton}`)
+      .get(`https://jsonplaceholder.typicode.com/posts/${id}`)
       .then((res) => myPost(res.data))
       .catch((err) => console.log(err));
     setLoading(false);
     console.log(post);
     console.log("useEffect triggered");
-  }, [idFromButton]);
+  }, [id]);
 
   // const myHeader= posts.map(post => (
   //   <header key={post.id} >
@@ -38,7 +34,7 @@ function DataFetch() {
   return (
     <div>
       <input type="text" value={id} onChange={(e) => setId(e.target.value)} />
-      <button type="button" onClick={handleClick}>
+      <button type="button" onClick={}>
         FetchPost
       </button>
       <br />
